@@ -31,3 +31,16 @@ function lastName () {
 }
 lastName
 
+function email(){
+	echo "Enter the emailAddress:"
+	read email
+	emailPattern="^[A-Z0-9a-z.%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}"
+
+	if [[ $email =~ $emailPattern ]]
+	then
+		echo "email address is correct"
+	else
+		echo "enter valid email address;"
+	fi
+}
+email
