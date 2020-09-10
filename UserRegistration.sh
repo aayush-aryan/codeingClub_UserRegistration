@@ -10,9 +10,24 @@ function firstName () {
 
 	if [[ $FirstName =~ $firstNamePattern ]]
 	then
-		echo "enter name is Valid"
+		echo "enter firstname is Valid"
 	else
-		echo "enter name is Invalid : PLZ starts with Caps letters;"
+		echo "enter firstname is Invalid : PLZ starts with Caps letters;"
 	fi
 }
 firstName
+
+function lastName () {
+   echo "Enter the LastName :"
+   read LastName
+   lastNamePattern="^[A-Z]{1}[a-z]{2,}$"
+
+   if [[ $LastName =~ $lastNamePattern ]]
+   then
+      echo "enter lastname is Valid"
+   else
+      echo "enter lastname is Invalid : PLZ starts with Caps letters;"
+   fi
+}
+lastName
+
