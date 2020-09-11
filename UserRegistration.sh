@@ -44,3 +44,17 @@ function email(){
 	fi
 }
 email
+
+function mobileNumber(){
+	echo "Enter the mobile number"
+	read mobileNumber
+	mobilePattern="(0/91)?[7-9][0-9]{9}"
+
+	if [[ $mobileNumber =~ $mobilePattern ]]
+	then
+		echo "valid number"
+	else
+		echo "invalid number"
+	fi
+}
+mobileNumber
