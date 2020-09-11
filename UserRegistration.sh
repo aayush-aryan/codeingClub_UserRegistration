@@ -58,3 +58,18 @@ function mobileNumber(){
 	fi
 }
 mobileNumber
+
+function passwordCharacters(){
+   echo "Enter the minimum eight characters password :"
+   read password
+   passwordPattern="^[a-zA-Z]{8,}$"
+
+   if [[ $password =~ $passwordPattern ]]
+   then
+      echo "password is Ok!"
+   else
+      echo "enter valid password;"
+   fi
+
+}
+passwordCharacters
