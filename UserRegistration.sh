@@ -89,3 +89,18 @@ function passwordCharactersAtleastOneCaps(){
 }
 passwordCharactersAtleastOneCaps
 
+function passwordCharactersAtleastOneNumericValue(){
+   echo "Enter the minimum eight characters password with minimum one Numeric Value :"
+   read password
+   passwordPattern="^[A-Z]{1}[0-9][a-z]{7,}$"
+
+   if [[ $password =~ $passwordPattern ]]
+   then
+      echo "password is Ok!"
+   else
+      echo "enter valid password;"
+   fi
+
+}
+passwordCharactersAtleastOneNumericValue
+
