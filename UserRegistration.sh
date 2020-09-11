@@ -73,3 +73,19 @@ function passwordCharacters(){
 
 }
 passwordCharacters
+
+function passwordCharactersAtleastOneCaps(){
+   echo "Enter the minimum eight characters password with minimum one caps:"
+   read password
+   passwordPattern="^[A-Z]{1}[a-z]{7,}$"
+
+   if [[ $password =~ $passwordPattern ]]
+   then
+      echo "password is Ok!"
+   else
+      echo "enter valid password;"
+   fi
+
+}
+passwordCharactersAtleastOneCaps
+
